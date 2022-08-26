@@ -1,4 +1,7 @@
-<h1>Steps to deploy cloud-storage app</h1>
+<h1>Cloud Storage app</h1>
+<p>This app storing users files with max disk space by an user 100mb</p>
+
+<h2>Steps to deploy cloud-storage app</h2>
 <ul>
  <li>git clone https://github.com/whatslve/cloud-storage.git --branch master</li>
 <li>cd cloud-storage</li>
@@ -9,6 +12,6 @@
         <li>MAX_DISK_SPACE=104857600</li>
     </ul>
 <li>./vendor/bin/sail up</li>
-<li> /vendor/bin/sail php artisan migrate</li>
+<li>./vendor/bin/sail php artisan migrate</li>
     </ul>
 
