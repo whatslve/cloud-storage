@@ -2,6 +2,22 @@
 <p>This app storing users files with max disk space by an user 100mb</p>
 
 <h2>Steps to deploy cloud-storage app</h2>
+Make sure that you have install and enabled related extensions: 
+<ul>
+    <li>PHP >= 8.0</li>
+    <li>BCMath PHP Extension</li>
+    <li>Ctype PHP Extension</li>
+    <li>cURL PHP Extension</li>
+    <li>DOM PHP Extension</li>
+    <li>Fileinfo PHP Extension</li>
+    <li>JSON PHP Extension</li>
+    <li>Mbstring PHP Extension</li>
+    <li>OpenSSL PHP Extension</li>
+    <li>PCRE PHP Extension</li>
+    <li>PDO PHP Extension</li>
+    <li>Tokenizer PHP Extension</li>
+    <li>XML PHP Extension</li>
+    </ul>
 <ul>
  <li>git clone https://github.com/whatslve/cloud-storage.git --branch master</li>
 <li>cd cloud-storage</li>
