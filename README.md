@@ -13,5 +13,7 @@
     </ul>
 <li>./vendor/bin/sail up</li>
 <li>./vendor/bin/sail php artisan migrate</li>
+<li>./vendor/bin/sail npm install</li>
+<li>./vendor/bin/sail npm run build</li>
     </ul>
 
