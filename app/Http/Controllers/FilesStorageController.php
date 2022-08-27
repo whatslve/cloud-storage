@@ -14,7 +14,7 @@ class FilesStorageController extends Controller
 {
 
     /**
-     * Display a listing of the resource.
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
@@ -44,11 +44,8 @@ class FilesStorageController extends Controller
     }
 
 
-
     /**
-     * Show the form for upload new file.
-     *
-     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function create()
     {
@@ -61,9 +58,8 @@ class FilesStorageController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|void
      */
     public function storeFile(Request $request)
     {
@@ -122,8 +118,8 @@ class FilesStorageController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
      */
     public function showFile($id)
     {
@@ -137,6 +133,11 @@ class FilesStorageController extends Controller
         ]);
     }
 
+    /**
+     * @param $id
+     * @param Files $files
+     * @return \Illuminate\Http\RedirectResponse|\Symfony\Component\HttpFoundation\StreamedResponse
+     */
     public function downloadFile($id, Files $files)
     {
         $file = $files->where('id', '=', $id)->first();
@@ -149,8 +150,8 @@ class FilesStorageController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
      */
     public function edit($id)
     {
@@ -166,8 +167,9 @@ class FilesStorageController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
+     * @param Request $request
+     * @param Files $files
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, Files $files)
     {
@@ -190,8 +192,8 @@ class FilesStorageController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function destroy($id)
     {

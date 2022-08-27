@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Redirect;
 
 class FoldersController extends Controller
 {
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
+     */
     public function showFolder($id)
     {
         $files = FilesMarkup::find($id)
@@ -28,14 +32,19 @@ class FoldersController extends Controller
         ]);
 
     }
+
     /**
-     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function createFolder()
     {
         return view('filesStorage.createFolder');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|void
+     */
     public function storeFolder(Request $request)
     {
         $request->validate([
