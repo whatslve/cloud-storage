@@ -33,6 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
+                    @auth
                     <li class="nav-item">
                         <a class="nav-link" href="/storage">
                             Storage
@@ -48,6 +49,7 @@
                             Create folder
                         </a>
                     </li>
+                        @endauth
                 </ul>
 
                 <!-- Right Side Of Navbar -->
