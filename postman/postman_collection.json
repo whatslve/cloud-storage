@@ -1,0 +1,594 @@
+{
+	"info": {
+		"_postman_id": "f7ce047a-4307-4c17-9238-1fe4165b20bc",
+		"name": "cloud-storage http://92.63.102.17/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23034701"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/login?email=tester@mail.ru&password=741ia002",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "tester@mail.ru"
+						},
+						{
+							"key": "password",
+							"value": "741ia002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/storage/list",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/api/storage/list",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"storage",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/store/file",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/vlad/Загрузки/steam_latest.deb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://92.63.102.17/api/store/file",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"store",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/jso",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/ogout",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"ogout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/register?name=tester&email=tester@mail.ru&password=741ia002&password_confirm=741ia002",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/register?name=tester&email=tester@mail.ru&password=741ia002&password_confirmation=741ia002",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "tester"
+						},
+						{
+							"key": "email",
+							"value": "tester@mail.ru"
+						},
+						{
+							"key": "password",
+							"value": "741ia002"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "741ia002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/file/download?id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/api/file/download?id=3",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"file",
+						"download"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/file/rename?new_name=test&file_id=4",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/api/file/rename?new_name=test&file_id=3",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"file",
+						"rename"
+					],
+					"query": [
+						{
+							"key": "new_name",
+							"value": "test"
+						},
+						{
+							"key": "file_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/file/delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/api/file/delete?id=3",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"file",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/folder/create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/api/folder/create?folder_name=test",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"folder",
+						"create"
+					],
+					"query": [
+						{
+							"key": "folder_name",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/api/user",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/folder/show?id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://92.63.102.17/api/folder/show?id=7",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"folder",
+						"show"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/store/file?folder_id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://92.63.102.17",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/vlad/Загрузки/steam_latest.deb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://92.63.102.17/api/store/file?folder_id=7",
+					"protocol": "http",
+					"host": [
+						"92",
+						"63",
+						"102",
+						"17"
+					],
+					"path": [
+						"api",
+						"store",
+						"file"
+					],
+					"query": [
+						{
+							"key": "folder_id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.sendRequest({",
+					"    url: 'http://92.63.102.17/sanctum/csrf-cookie',",
+					"    method: 'GET'",
+					"}, function (error, response, { cookies }) {",
+					"    if (!error) {",
+					"        pm.environment.set('xsrf-token', cookies.get('XSRF-TOKEN'))",
+					"        pm.request.headers.add(\"X-XSRF-TOKEN: \" + cookies.get('XSRF-TOKEN'));",
+					"   ",
+					"    }",
+					"})"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
